@@ -1,5 +1,5 @@
 # chat-app
 Group chat application using Node.js (socket.io)
 
-####Installation
+#### Installation
 yarn install & run -> yarn dev
