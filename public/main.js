@@ -5,6 +5,8 @@ const nameInput = document.getElementById("name-input");
 const messageForm = document.getElementById("message-form");
 const messageInput = document.getElementById("message-input");
 
+const messageTone = new Audio("/mgs_tone.mp3");
+
 socket.on("clients-total", (data) => {
   totalClients.innerText = `Total Clients: ${data}`;
 });
@@ -27,6 +29,7 @@ function sendMessage() {
 }
 
 socket.on("chat-message", (data) => {
+  messageTone.play();
   addMessageToUI(false, data);
 });
 
